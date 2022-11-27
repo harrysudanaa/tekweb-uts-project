@@ -26,6 +26,6 @@ Route::get('/dashboard', function () {
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/service', [ServiceController::class, 'index']);
-Route::get('/cart', [CartController::class, 'cart']);
+Route::get('/cart', [CartController::class, 'cart'])->middleware(['auth', 'verified'])->name('cart');
 
 require __DIR__ . '/auth.php';

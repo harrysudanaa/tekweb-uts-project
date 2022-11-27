@@ -8,6 +8,7 @@ class CartController extends Controller
 {
     public function cart()
     {
-        return view('frontpage.cart', ['title' => 'Pesan']);
+        $packet_name = "Packet 1";
+        return view('frontpage.cart', compact('packet_name'));
     }
 }

@@ -1,62 +1,10 @@
+@section('title')
+  {{ 'Guide List' }}
+@endsection
 <x-service-layout>
-
   <div class="container flex flex-col">
-    <!-- navbar -->
-    <nav class="w-full bg-cyan-400 p-3 flex justify-between fixed shadow-lg sm:flex sm:justify-around z-[999]">
-      <div class="logo ml-6">
-        <a href="">GUIDY</a>
-      </div>
-      <!-- nav mobile -->
-      <div class="sidenav relative -mr-3 sm:static">
-        <div class="hamburger sm:hidden mr-3 cursor-pointer">
-          <i class="fa-solid fa-bars text-xl mr-4"></i>
-        </div>
-        <div class="hamburger-cross cursor-pointer relative sm:hidden">
-          <i class="fa-solid fa-xmark text-2xl ml-14"></i>
-        </div>
-        <div class="container nav-menu absolute top-8 right-0 -z-10 bg-cyan-400 w-40 h-screen translate-x-full ease-in-out transition sm:hidden sm:static sm:translate-x-0 sm:w-auto sm:h-0">
-          <ul class=" mt-6 ml-4">
-            <li class="mb-1 border-b-2 border-white sm:border-0">
-              <a href="/">Home</a>
-            </li>
-            <li class="mb-1 border-b-2 border-white">
-              <a href="#about">About Us</a>
-            </li>
-            <li class="mb-1 border-b-2 border-white">
-              <a href="#services">Services</a>
-            </li>
-            <li class="mb-1 border-b-2 border-white">
-              <a href="">Contact</a>
-            </li>
-            <li class="mt-10">
-              <a href="" class="bg-white rounded px-3 py-1">Sign In</a>
-            </li>
-          </ul>
-        </div>
-        <!-- nav desktop -->
-        <ul class="hidden sm:flex">
-          <li class="mx-2">
-            <a href="/">Home</a>
-          </li>
-          <li class="mx-2">
-            <a href="">About Us</a>
-          </li>
-          <li class="mx-2">
-            <a href="#services">Services</a>
-          </li>
-          <li class="mx-2">
-            <a href="">Contact</a>
-          </li>
-          <li class="ml-20">
-            <a href="" class="bg-white rounded px-4 box-border py-1">Sign In</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- end navbar -->
-
     <!-- search bar -->
-    <div class="no-repeat bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(https://images.unsplash.com/photo-1606820854416-439b3305ff39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);">
+    <div class="no-repeat bg-cover bg-center h-screen" style="background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(https://images.unsplash.com/photo-1606820854416-439b3305ff39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);">
       <div class="my-auto py-56 text-white flex flex-col items-center">
         <h1 class="text-2xl mb-2 sm:text-5xl sm:mb-8">Find Guide To Guide You.</h1>
         <form action="">

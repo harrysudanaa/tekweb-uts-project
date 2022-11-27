@@ -1,3 +1,6 @@
+@section('title')
+  {{ 'Booking' }}
+@endsection
 <x-cart-layout>
   <div class="relative">
     <div class="absolute bg-white rounded-md shadow-lg top-40 right-10 w-64 overflow-hidden">
@@ -6,22 +9,22 @@
       </div>
       <div class="mt-3 ml-5">
         <h1 class="text-lg font-semibold">Booking</h1>
-        <div>
+        <div class="your-packet">
           <ul class="checkout">
             <li class="flex justify-between">
               <p>- Private Packet</p>
-              <p class="mr-3">Rp750.000,-</p>
+              <p class="mr-3">Rp<span class="price-cost">750000</span>,-</p>
             </li>
           </ul>
         </div>
         <div class="mt-20 flex items-center justify-between">
           <h3>Total Cost</h3>
-          <p class="mr-5">Rp750.000,-</p>
+          <p class="mr-5">Rp<span class="total-cost">750.000</span>,-</p>
         </div>
       </div>
       <button class="bg-cyan-500 w-full py-1 px-3 mt-5">CHECKOUT</button>
     </div>
-    <div class="max-w-64 pt-20">
+    <div class="max-w-64 pt-28">
       <h1 class="font-bold text-3xl ml-14 mb-3">Booking Guide</h1>
       <hr class="border-slate-300">
     </div>
@@ -33,17 +36,17 @@
         </div>
         <div class="">
           <div class="p-3">
-            <h3 class="font-semibold text-2xl">Privat Packet</h3>
+            <h3 class="name-packet font-semibold text-2xl">Privat Packet</h3>
             <ul class="text-sm text-slate-600">
               <li>
-                <p>- 1 Guide Tour</p>
+                <p class="detail-packet">- 1 Guide Tour</p>
               </li>
               <li>
-                <p>- 1 Day</p>
+                <p class="detail-packet">- 1 Day</p>
               </li>
             </ul>
             <div class="mt-24 flex items-center">
-              <p class="text-xl text-slate-900 font-semibold">Rp750.000,-</p>
+              <p class="text-xl text-slate-900 font-semibold">Rp<span class="price">750000</span>,-</p>
               <i class="fa-solid fa-cart-plus ml-20 text-xl add-cart cursor-pointer"></i>
             </div>
           </div>
@@ -52,10 +55,3 @@
     </div>
   </div>
 </x-cart-layout>
-<script>
-  $(document).ready(function() {
-    $(".add-cart").click(function() {
-      console.log();
-    })
-  })
-</script>

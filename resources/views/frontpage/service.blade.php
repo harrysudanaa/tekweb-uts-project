@@ -23,13 +23,14 @@
       <div class="">
         <h1 class="text-center mb-5 font-bold text-2xl sm:text-5xl sm:mb-10">Find your guide</h1>
         <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center">
+          @foreach($data as $d)
           <div class="card w-80 rounded-md flex flex-col justify-center shadow-lg border mb-7 mx-5 cursor-pointer">
             <div class="img rounded-t-md overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" class="w-full h-56">
-              <p class="pl-3 pr-5 py-1 rounded-bl-lg absolute bg-cyan-500 top-0 right-0 text-white font-semibold">Rp150.000/h</p>
+              <img src="{{ asset('assets/img/'.$d->image) }}" alt="" class="w-full h-56">
+              <p class="pl-3 pr-5 py-1 rounded-bl-lg absolute bg-cyan-500 top-0 right-0 text-white font-semibold">Rp{{ $d->price }}/h</p>
             </div>
             <div class="p-3">
-              <h3 class="font-semibold text-lg">John Smith</h3>
+              <h3 class="font-semibold text-lg">{{ $d->name }}</h3>
               <p class="text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, possimus.</p>
             </div>
             <div class="flex justify-around pb-3 pt-1 border-t-2 mt-3">
@@ -47,162 +48,21 @@
               </div>
             </div>
           </div>
-          <div class="card w-80 rounded-md flex flex-col justify-center shadow-lg border mb-7 mx-5 cursor-pointer">
-            <div class="img rounded-t-md overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" class="w-full h-56">
-              <p class="pl-3 pr-5 py-1 rounded-bl-lg absolute bg-cyan-500 top-0 right-0 text-white font-semibold">Rp150.000/h</p>
-            </div>
-            <div class="p-3">
-              <h3 class="font-semibold text-lg">John Smith</h3>
-              <p class="text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, possimus.</p>
-            </div>
-            <div class="flex justify-around pb-3 pt-1 border-t-2 mt-3">
-              <div class="flex flex-col items-center">
-                <h3 class="">Review</h3>
-                <p>4</p>
-              </div>
-              <div class="">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <p class="text-center">5</p>
-              </div>
-            </div>
-          </div>
-          <div class="card w-80 rounded-md flex flex-col justify-center shadow-lg border mb-7 mx-5 cursor-pointer">
-            <div class="img rounded-t-md overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" class="w-full h-56">
-              <p class="pl-3 pr-5 py-1 rounded-bl-lg absolute bg-cyan-500 top-0 right-0 text-white font-semibold">Rp150.000/h</p>
-            </div>
-            <div class="p-3">
-              <h3 class="font-semibold text-lg">John Smith</h3>
-              <p class="text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, possimus.</p>
-            </div>
-            <div class="flex justify-around pb-3 pt-1 border-t-2 mt-3">
-              <div class="flex flex-col items-center">
-                <h3 class="">Review</h3>
-                <p>4</p>
-              </div>
-              <div class="">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <p class="text-center">5</p>
-              </div>
-            </div>
-          </div>
-          <div class="card w-80 rounded-md flex flex-col justify-center shadow-lg border mb-7 mx-5 cursor-pointer">
-            <div class="img rounded-t-md overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" class="w-full h-56">
-              <p class="pl-3 pr-5 py-1 rounded-bl-lg absolute bg-cyan-500 top-0 right-0 text-white font-semibold">Rp150.000/h</p>
-            </div>
-            <div class="p-3">
-              <h3 class="font-semibold text-lg">John Smith</h3>
-              <p class="text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, possimus.</p>
-            </div>
-            <div class="flex justify-around pb-3 pt-1 border-t-2 mt-3">
-              <div class="flex flex-col items-center">
-                <h3 class="">Review</h3>
-                <p>4</p>
-              </div>
-              <div class="">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <p class="text-center">5</p>
-              </div>
-            </div>
-          </div>
-          <div class="card w-80 rounded-md flex flex-col justify-center shadow-lg border mb-7 mx-5 cursor-pointer">
-            <div class="img rounded-t-md overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" class="w-full h-56">
-              <p class="pl-3 pr-5 py-1 rounded-bl-lg absolute bg-cyan-500 top-0 right-0 text-white font-semibold">Rp150.000/h</p>
-            </div>
-            <div class="p-3">
-              <h3 class="font-semibold text-lg">John Smith</h3>
-              <p class="text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, possimus.</p>
-            </div>
-            <div class="flex justify-around pb-3 pt-1 border-t-2 mt-3">
-              <div class="flex flex-col items-center">
-                <h3 class="">Review</h3>
-                <p>4</p>
-              </div>
-              <div class="">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <p class="text-center">5</p>
-              </div>
-            </div>
-          </div>
-          <div class="card w-80 rounded-md flex flex-col justify-center shadow-lg border mb-7 mx-5 cursor-pointer">
-            <div class="img rounded-t-md overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" class="w-full h-56">
-              <p class="pl-3 pr-5 py-1 rounded-bl-lg absolute bg-cyan-500 top-0 right-0 text-white font-semibold">Rp150.000/h</p>
-            </div>
-            <div class="p-3">
-              <h3 class="font-semibold text-lg">John Smith</h3>
-              <p class="text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, possimus.</p>
-            </div>
-            <div class="flex justify-around pb-3 pt-1 border-t-2 mt-3">
-              <div class="flex flex-col items-center">
-                <h3 class="">Review</h3>
-                <p>4</p>
-              </div>
-              <div class="">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <p class="text-center">5</p>
-              </div>
-            </div>
-          </div>
-          <div class="card w-80 rounded-md flex flex-col justify-center shadow-lg border mb-7 mx-5 cursor-pointer">
-            <div class="img rounded-t-md overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" class="w-full h-56">
-              <p class="pl-3 pr-5 py-1 rounded-bl-lg absolute bg-cyan-500 top-0 right-0 text-white font-semibold">Rp150.000/h</p>
-            </div>
-            <div class="p-3">
-              <h3 class="font-semibold text-lg">John Smith</h3>
-              <p class="text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, possimus.</p>
-            </div>
-            <div class="flex justify-around pb-3 pt-1 border-t-2 mt-3">
-              <div class="flex flex-col items-center">
-                <h3 class="">Review</h3>
-                <p>4</p>
-              </div>
-              <div class="">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <p class="text-center">5</p>
-              </div>
-            </div>
-          </div>
-
+          @endforeach
         </div>
       </div>
     </section>
     <!-- end tour guide list -->
 
     <!-- footer -->
-    <footer class="mt-10 bg-cyan-500 p-5">
+    <footer class="mt-10 bg-blue-500 text-white p-5">
       <div class="flex justify-around mb-3">
-        <h1 class="my-auto">Logo</h1>
+        <a href="/" class="flex items-center">
+          {{-- <img src="{{ asset('assets/img/guidyLogo.png') }}" class="mr-3 h-6 sm:h-32" alt="Guidy Logo"> --}}
+          <span class="self-center text-4xl font-semibold whitespace-nowrap">Guidy.</span>
+        </a>
         <div>
-          <h4 class="font-semibold text-lg">Contact Us</h4>
+          <h4 class="font-semibold text-lg ">Contact Us</h4>
           <div class="flex flex-col">
             <a href=""><i class="text-lg fa-brands fa-instagram mb-2 mr-3"></i>guidy.id</a>
             <a href=""><i class="fa-brands fa-facebook mb-2 mr-3"></i>guidy.id</a>

@@ -34,10 +34,11 @@
 
   <script type="text/javascript">
     $(document).ready(function() {
-      $("#about h1").on("load", function() {
-        $this.trigger("load")
+      $(".card").click(function() {
+        window.location.href = "cart";
       })
-    })
+
+    });
   </script>
   <script>
     const container = document.querySelector(".nav-container");
